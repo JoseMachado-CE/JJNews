@@ -4,6 +4,7 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+    background-color: aqua;
 }
 
 #first-section {
@@ -12,6 +13,15 @@
     background-repeat: no-repeat;
     min-height: 400px;
 
+}
+
+.img-posts {
+    background-color: aqua;
+    width: 100%;
+    height: 225px;
+
+    background-position: 10%, center;
+    background-repeat: no-repeat;
 }
 
 @media (min-width: 768px) {
