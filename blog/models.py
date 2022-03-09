@@ -14,7 +14,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=200)
     email = models.EmailField()
     text = models.TextField()
-    image = models.ImageField(default= True)
+    image = models.ImageField(upload_to='posts', null=True)
     city = models.CharField(max_length=100)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, default=True)
     

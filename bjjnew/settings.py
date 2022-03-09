@@ -60,7 +60,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'templates'    
+            BASE_DIR / 'templates'  
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -122,14 +122,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static"   
+    BASE_DIR / "static"
 ]
 
+MEDIA_ROOT = BASE_DIR / 'upload'
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/images/'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

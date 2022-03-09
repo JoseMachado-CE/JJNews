@@ -1,16 +1,22 @@
 <div class="album py-5 bg-light">
     <div class="container">
+    
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for post in posts %}
+        
         <div class="col">
-            
-        <div class="card shadow-sm">
-            <div class="img-posts bd-placeholder-img card-img-top">
-                {{ post.image }}
-            </div>
 
+        <div class="card shadow-sm">
+            <a href="">
+            <div class="img-posts bd-placeholder-img card-img-top">
+
+                {{ post.title }}
+            </div>
             <div class="card-body">
             <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
                 {{ post.title }}
             </p>
             <div class="d-flex justify-content-between align-items-center">
@@ -31,9 +37,10 @@
                 <small class="text-muted">9 mins</small>
             </div>
             </div>
+        </a>
         </div>
+  
         </div>
         {% endfor %}
     </div>
 </div>
-
