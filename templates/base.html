@@ -59,7 +59,7 @@
                 <circle cx="12" cy="13" r="4" />
               </svg>
               -->
-              <strong>JJNew</strong>
+              <a class="left" href="{% url 'Blogstart' %}">JJNew</a>
             </a>
             <button
               class="navbar-toggler"
@@ -76,10 +76,11 @@
         </div>
       </header>
     </header>
-
-    <main id="first-section">
-        {% include 'includes/main-site.html'  %}
-    </main>
+    {% block header %}
+      <main id="first-section">
+          {% include 'includes/main-site.html'  %}
+      </main>
+    {% endblock %}
 
     {% block content %} 
     {% endblock %}

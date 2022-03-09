@@ -1,17 +1,9 @@
-
 {% extends 'base.html' %} 
 
 {% block content %}
-    <section class="">
-        
-            {% include 'blog/includes/post.html' %}
-        
+
+    <section>
+        {% include 'blog/includes/post.html' %}
     </section>
 
-    <form method="POST" action="{% url 'Blogstart' %}">
-        {% csrf_token %}
-        {{ form }}
-        <button class="btn btn-primary rounded-0" type="submit">Add Post</button>
-    </form>
-    
 {% endblock %}

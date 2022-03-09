@@ -18,10 +18,33 @@
 .img-posts {
     background-color: aqua;
     width: 100%;
-    min-height: 225px;
+    max-height: 225px;
     display: block;
     background-position: 10%, center;
     background-repeat: no-repeat;
+}
+
+.card-text {
+
+    text-overflow: ellipsis;
+
+}
+
+.img-blog {
+    width: 40px;
+    height: 100px;
+}
+
+.card-body {
+
+    max-height: 12rem;
+}
+
+a>.card-text {
+    text-decoration: none;
+    color: #000;
+    list-style: none;
+
 }
 
 @media (min-width: 768px) {
