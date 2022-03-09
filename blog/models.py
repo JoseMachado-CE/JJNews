@@ -14,11 +14,12 @@ class Blog(models.Model):
     title = models.CharField(max_length=200)
     email = models.EmailField()
     text = models.TextField()
+    image = models.ImageField(default= True)
     city = models.CharField(max_length=100)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, default=True)
     
     def __str__(self):
-        return self.name
+        return self.username
     
     
 
