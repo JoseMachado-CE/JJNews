@@ -1,9 +1,22 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %} {% block content %}
 
-{% block content %}
+<section>{% include 'blog/includes/post.html' %}</section>
 
-    <section>
-        {% include 'blog/includes/post.html' %}
-    </section>
+<main>
+    <h1 class="visually-hidden">Heroes examples</h1>
+
+    <div class="px-4 py-5 my-5 text-center bg-black">
+        <h1 class="display-5 fw-bold text-white">Weekly Specials</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="text-white">Subscribe to our blog to get newest information about jiujitsu</p>
+            <form>
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Email address" aria-label="Recipient's username" aria-describedby="emailHelp" id="exampleInputEmail1">
+                    <button class="btn btn-primary" type="button" id="button-addon2">Submit</button>
+                  </div>
+            </form>
+        </div>
+    </div>
+</main>
 
 {% endblock %}
