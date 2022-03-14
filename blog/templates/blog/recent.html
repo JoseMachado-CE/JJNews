@@ -1,0 +1,6 @@
+{% for post in posts %}
+<ul>
+    <li><a href="{% url 'read-later' %} post.slug">{{ has_posts }}</li>
+</ul>
+{%endfor%}
+

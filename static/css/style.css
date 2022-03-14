@@ -40,7 +40,9 @@
     max-height: 12rem;
 }
 
-
+.link-secondary {
+    color: #fff;
+}
 
 .card a {
     text-decoration: none;

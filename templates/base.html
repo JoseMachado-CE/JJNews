@@ -11,51 +11,41 @@
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
-    <header>
-      <header>
-        <div class="collapse bg-dark" id="navbarHeader">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-8 col-md-7 py-4">
-                <h4 class="text-white">About</h4>
-                <p class="text-muted">
-                  Add some information about the album below, the author, or any
-                  other background context. Make it a few sentences long so
-                  folks can pick up some informative tidbits. Then, link them
-                  off to some social networking sites or contact information.
-                </p>
-              </div>
-              <div class="col-sm-4 offset-md-1 py-4">
-                <h4 class="text-white">Contact</h4>
-                <ul class="list-unstyled">
-                  <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                  <li><a href="#" class="text-white">Like on Facebook</a></li>
-                  <li><a href="#" class="text-white">Email me</a></li>
-                </ul>
-              </div>
-            </div>
+    <div class="container-fluid bg-dark text-white">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a class="link-secondary" href="#">Subscribe</a>
           </div>
-        </div>
-        <div class="navbar navbar-dark bg-dark shadow-sm">
-          <div class="container">
-            <a href="{% url 'Blogstart' %}" class="navbar-brand d-flex align-items-center">
-              JJNew
+          <div class="col-4 text-center">
+            <h2><a class="blog-header-logo text-white" href="#">JJNew</a></h2>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="link-secondary" href="#" aria-label="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
             </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarHeader"
-              aria-controls="navbarHeader"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
           </div>
         </div>
       </header>
-    </header>
+    
+      <div class="nav-scroller py-1 mb-2 text-white">
+        <nav class="nav d-flex justify-content-between text-white">
+          <a class="p-2 link-secondary" href="{% url 'read-later' %}">Recent posts</a>
+          <a class="p-2 link-secondary" href="#">U.S.</a>
+          <a class="p-2 link-secondary" href="#">Technology</a>
+          <a class="p-2 link-secondary" href="#">Design</a>
+          <a class="p-2 link-secondary" href="#">Culture</a>
+          <a class="p-2 link-secondary" href="#">Business</a>
+          <a class="p-2 link-secondary" href="#">Politics</a>
+          <a class="p-2 link-secondary" href="#">Opinion</a>
+          <a class="p-2 link-secondary" href="#">Science</a>
+          <a class="p-2 link-secondary" href="#">Health</a>
+          <a class="p-2 link-secondary" href="#">Style</a>
+          <a class="p-2 link-secondary" href="#">Travel</a>
+        </nav>
+      </div>
+    </div>
     {% block header %}
       <main id="first-section">
           {% include 'includes/main-site.html'  %}

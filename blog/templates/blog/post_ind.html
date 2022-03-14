@@ -9,11 +9,16 @@
   <div class="row g-5">
     <div class="col-md-6 mb-3">
         <article class="blog-post">
-        
             <p class="blog-post-meta">January 1, 2021 by <a href="#">{{ posts.author }}</a></p>
-
-            <a href="" class="btn btn-primary mb-4">Read later</a>
-
+            {% if is_fav %}
+              <p> fav one </p>
+            {% else %}
+              <form method="POST" action="{% url 'read-later' %}">
+                {% csrf_token %}
+                <input type="hidden" name="posts_id" value="{{ posts.id }}">
+                <button class="btn btn-primary mb-4">Read later</button>
+              </form>
+            {% endif %}
             <p>
             {{ posts.pre_text }}
             </p>

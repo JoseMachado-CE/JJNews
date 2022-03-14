@@ -19,17 +19,14 @@ class PostSingle(DetailView):
     model = Blog
     context_object_name = 'posts'
     
-
-        
-
-            
-        
+    def post(self,request):
         
     
+        print(request.session.get('slug'))
     
     
+def PostsFavorite(request):
+    if request.session.test_cookie_worked():
+        print('ei')
+    return HttpResponseRedirect("/")
     
-        
-    
-    
-
