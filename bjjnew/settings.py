@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'products'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'bjjnew.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-josemachadoce-jjnews-xkmi2zi2lsw.ws-eu34.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ["https://8000-josemachadoce-jjnews-xkmi2zi2lsw.ws-eu38.gitpod.io"]
 
 TEMPLATES = [
     {
@@ -86,6 +87,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
 
 
 # Password validation

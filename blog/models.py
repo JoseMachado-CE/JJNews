@@ -28,6 +28,21 @@ class Blog(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)
+        
+
+
+class all_products(models.Model):
+    def get_all_products():
+        items = []
+        with open('/flipkart_com-ecommerce_sample.csv','r') as fp:
+            # You can also put the relative path of csv file
+            # with respect to the manage.py file
+            reader1 = csv.reader(fp, delimiter=';')
+            for value in reader1:
+                items.append(value)
+                
+        return items
+        print(items)
     
     
 

@@ -7,6 +7,7 @@ from .forms import BlogForm
 from django.urls import reverse
 from django.shortcuts import get_object_or_404
 
+    
 
 class BlogStart(ListView):
     template_name = 'blog/index.html'
